@@ -1,0 +1,37 @@
+server:
+  port: 9555
+
+debug: true
+
+spring:
+  datasource:
+    dynamic:
+      p6spy: true
+      #      primary: china
+      datasource:
+        china:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          jdbc-url: jdbc:mysql://XXX:3306/tenant?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+          username: xxx
+          password: xxx
+        singapore:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          jdbc-url: jdbc:mysql://xxx:3306/tenant?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+          username: xxx
+          password: xxx
+      hikari:
+        pool-name: multiTenantHikariCP
+        min-idle: 5
+        max-pool-size: 15
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        connection-test-query: select 1
+        # 监控
+        is-register-mbeans: true
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      select-strategy: not_empty
+    sql-parser-cache: true

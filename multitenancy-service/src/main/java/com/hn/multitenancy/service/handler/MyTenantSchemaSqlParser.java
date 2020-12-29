@@ -1,4 +1,4 @@
-package com.hn.multitenancy.service.handler;//package com.demo.multitenant.service.handler;
+package com.hn.multitenancy.service.handler;
 //
 //import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSchemaHandler;
 //import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSchemaSqlParser;

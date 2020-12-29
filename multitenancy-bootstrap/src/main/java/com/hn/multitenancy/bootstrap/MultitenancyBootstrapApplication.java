@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @MapperScan("com.hn.multitenancy.service.dao")
 @SpringBootApplication(scanBasePackages = {"com.hn.multitenancy"}, exclude = {HibernateJpaAutoConfiguration.class})
-@ServletComponentScan(basePackages = {"com.demo.multitenancy.web"})
+@ServletComponentScan(basePackages = {"com.hn.multitenancy.web"})
 public class MultitenancyBootstrapApplication {
 
     public static void main(String[] args) {
